@@ -1,0 +1,21 @@
+{
+  "output": {
+    "baseDir": "out-argentina"
+  },
+  "items": [
+    {
+      "name": "RA - Peru Campeon",
+      "url": "http://radioambulante.org/transcripcion/transcripcion-peru-campeon",
+      "contexts": [
+        {
+          "parent": ".article-body",
+          "exclude": [
+            "iframe",
+            ".fb-comments",
+            "h3"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "output": {
+    "baseDir": "out"
+  },
+  "items": [
+    {
+      "name": "RA - Peru Campeon",
+      "url": "http://radioambulante.org/transcripcion/transcripcion-peru-campeon",
+      "contexts": [
+        {
+          "parent": ".article-body",
+          "exclude": [
+            "iframe",
+            ".fb-comments",
+            "h3"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RA - poi",
+      "url": "http://radioambulante.org/transcripcion/transcripcion-jaz-y-lalay",
+      "contexts": [
+        {
+          "parent": ".article-body",
+          "exclude": [
+            "iframe",
+            ".fb-comments",
+            "h3"
+          ]
+        }
+      ]
+    }
+  ]
+}
