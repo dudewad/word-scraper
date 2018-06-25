@@ -97,6 +97,21 @@ An example of this configuration is below:
 These files are picky, so if you have an out-of-place comma or don't put things in double quotes,
 it'll break. Keep that in mind.
 
+# Generating the output
+
+Once your configuration file is ready, you need to run the scraper to generate the data from the websites that you added
+to the configuration.
+
+You do this by opening a command prompt in the root directory of the project, and running the main script, feeding it
+your new configuration file. For instance, if you made a config file called `my-config-file.json`, then your command
+would be:
+
+`node main -c my-config-file.json`
+
+This shouldn't take too long to run. Once it finishes, if you open the project directory you should see your directory
+with your output data in it at the location you specified in your config file's `out.baseDir` property (see the
+configuration section for more on that).
+
 # Viewing the output
 
 To view the output you need to start the http-server that you installed in the getting started section.
