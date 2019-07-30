@@ -51,17 +51,21 @@ else {
   prepareBaseDir();
 }
 
+
 // Kick off all requests to get remote files via curl
 items.forEach(i => {
-  const req = new Curl();
+  const req = new Curl();  
 
   req.setOpt('URL', i.url);
-  req.setOpt('FOLLOWLOCATION', 1);
+  req.setOpt('FOLLOWLOCATION', true);
   req.setOpt(Curl.option.CAINFO, certFile);
   req.on('end', (status, body) => {
+    console.log('COMPLETE');
     onCurlComplete(i, status, body);
   });
   req.on('error', () => {
+    console.log('ERROR');
+    
     numItemsCompleted++;
     numErrors++;
     onParseComplete();
@@ -71,6 +75,8 @@ items.forEach(i => {
 
 // Parse a curl request
 function onCurlComplete(item, status, body) {
+  console.log('COMPLETED');
+  
   const $ = cheerio.load(body);
 
   item._parsed = {

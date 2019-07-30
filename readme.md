@@ -97,6 +97,25 @@ An example of this configuration is below:
 These files are picky, so if you have an out-of-place comma or don't put things in double quotes,
 it'll break. Keep that in mind.
 
+### Local files
+
+If you want to use local files, you can. You'd want to do this if for instance a site is returning empty results.
+You need to create a new file with the following structure:
+```
+<html>
+<body>
+  ...your content here
+</body>
+</html>
+```
+...where you paste the text content you want to use.
+
+And then for the URL in the config, use the file protocol along with the full path to the file. For instance:
+```
+file://C:/dev/webroot/word-scraper/duolingo.html
+```
+
+
 # Generating the output
 
 Once your configuration file is ready, you need to run the scraper to generate the data from the websites that you added
